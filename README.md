@@ -7,7 +7,7 @@ Disclaimer
 ==========
 
 THIS IS IMPORTANT. This program is not intended for hacker wannabes.  This is
-meant ONLY for network administrators. I WILL DENY ANY RESPONSIBILITY FOR 
+meant ONLY for network administrators. I WILL DENY ANY RESPONSIBILITY FOR ANY
 DAMAGE CAUSED BY IMPROPER OR ILLEGAL USE OF THIS PROGRAM.
 
 Introduction
