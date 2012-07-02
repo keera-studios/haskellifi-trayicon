@@ -34,7 +34,7 @@ Installation
 You neet to have the Network Manager's CLI installed (running 'which nmcli'
 should tell you whether it is available or not).
 
-Install https://github.com/ivanperez-keera/keera-hails (download, unpack, cabal
+Install https://github.com/keera-studios/keera-hails (download, unpack, cabal
 install).
 
 Download, unpack and run 'cabal install' from
