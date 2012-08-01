@@ -1,4 +1,6 @@
--- | Shows the popup menu when the user left-clicks the icon
+-- | Shows a menu with the current wifi list when the status icon is activated.
+--
+-- (View => View)
 module Controller.Conditions.WifiListMenu where
 
 import Control.Monad

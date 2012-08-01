@@ -1,4 +1,8 @@
--- | Regularly updates the wifi list
+-- | Updates the wifi list regularly (every 5 seconds), selecting only those
+-- wifis for which a password can be suggested.
+--
+-- This is an IO => Model condition. It modifies the model from a concurrent
+-- thread. It does not interact with the view in any way.
 module Controller.Conditions.WifiListPoll where
 
 import Control.Concurrent
@@ -15,8 +19,10 @@ installHandlers cenv = void $
 
 condition :: CEnv -> IO ()
 condition cenv = void $ forkIO $ do
-  let pm = model cenv
-  list <- fmap (filter isCrackeableWifi) $ getDetectedWifis
+  -- Get List of wifis
+  list <- fmap (filter isCrackeableWifi) getDetectedWifis
              
-  curList  <- getWifiList pm
-  flip mapM_ list $ \e -> when (e `notElem` curList) $ addWifi pm e
+  -- Add only those that aren't present in the list already
+  let pm = model cenv
+  curList <- getWifiList pm
+  forM_ list $ \e -> when (e `notElem` curList) $ addWifi pm e

@@ -1,3 +1,6 @@
+-- Clears the wifi list when requested
+--
+-- (View => Model): When the "clear wifi list" menu is activated (view), the list is cleared (model).
 module Controller.Conditions.Clear where
 
 import Control.Monad

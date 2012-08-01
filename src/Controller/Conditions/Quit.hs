@@ -1,4 +1,7 @@
--- | Shows the popup menu when the user right-clicks the icon
+-- | Quits the program when the user activates the menu item
+--
+-- (View => View): Stops the graphical subsystem when the user selects the
+-- option "Quit", effectively stopping the program too.
 module Controller.Conditions.Quit where
 
 import Control.Monad

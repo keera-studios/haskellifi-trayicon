@@ -1,14 +1,18 @@
--- | Shows the popup menu when the user right-clicks the icon
+-- | Installs the icon in the system traybar when the program is initialised
+--
+-- (Model => View): Installs the icon in the system traybar.
+--
+-- Note: The event comes from the model, although the exact contents of the
+-- model is not used in any way.
 module Controller.Conditions.Icon where
 
-import Paths_haskellifi_trayicon
 import Graphics.UI.Gtk
 
 import CombinedEnvironment
+import Paths_haskellifi_trayicon
 
 installHandlers :: CEnv -> IO()
-installHandlers cenv =
-  onEvent pm Initialised $ condition cenv
+installHandlers cenv = onEvent pm Initialised $ condition cenv
   where pm = model cenv
 
 condition :: CEnv -> IO ()

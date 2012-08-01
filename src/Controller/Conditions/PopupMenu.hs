@@ -1,4 +1,6 @@
 -- | Shows the popup menu when the user right-clicks the icon
+--
+-- (View => View): When the icon's menu is requested, the main menu is shown.
 module Controller.Conditions.PopupMenu where
 
 import Control.Monad
