@@ -45,7 +45,7 @@ Build-type:          Custom
 -- Extra-source-files:  
 
 -- Constraint on the version of Cabal needed to build this package.
-Cabal-version:       >=1.2
+cabal-version: >= 1.10
 
 Data-Files: data/wifi.png,
             Interface.glade
