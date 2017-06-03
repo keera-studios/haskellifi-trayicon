@@ -15,7 +15,7 @@ Synopsis:            Detect wifis and suggest predefined passwords
 -- Description:         
 
 -- URL for the project homepage or repository.
-Homepage:            http://keera.es/projects/haskellifi-trayicon
+Homepage:            http://keera.co.uk/projects/haskellifi-trayicon
 
 -- The license under which the package is released.
 License:             BSD3
@@ -28,7 +28,7 @@ Author:              Ivan Perez
 
 -- An email address to which users can send suggestions, bug reports,
 -- and patches.
-Maintainer:          ivan.perez@keera.es
+Maintainer:          ivan.perez@keera.co.uk
 
 -- A copyright notice.
 -- Copyright:           
