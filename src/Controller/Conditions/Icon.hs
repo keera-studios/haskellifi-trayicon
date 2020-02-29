@@ -4,6 +4,11 @@
 --
 -- Note: The event comes from the model, although the exact contents of the
 -- model is not used in any way.
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Controller.Conditions.Icon where
 
 import Graphics.UI.Gtk

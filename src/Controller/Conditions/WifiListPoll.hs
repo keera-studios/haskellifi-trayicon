@@ -3,6 +3,11 @@
 --
 -- This is an IO => Model condition. It modifies the model from a concurrent
 -- thread. It does not interact with the view in any way.
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Controller.Conditions.WifiListPoll where
 
 import Control.Concurrent
@@ -21,7 +26,7 @@ condition :: CEnv -> IO ()
 condition cenv = void $ forkIO $ do
   -- Get List of wifis
   list <- fmap (filter isCrackeableWifi) getDetectedWifis
-             
+
   -- Add only those that aren't present in the list already
   let pm = model cenv
   curList <- getWifiList pm
