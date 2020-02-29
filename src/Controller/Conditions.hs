@@ -3,6 +3,10 @@
 -- two conditions: one that must be checked only when the model changes
 -- (and updates the view accordingly), and another that must be checked
 -- when the view receives an event (and updates the model accordingly).
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
 
 module Controller.Conditions
    ( installHandlers )

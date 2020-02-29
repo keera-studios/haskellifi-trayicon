@@ -1,6 +1,11 @@
 -- | Shows the popup menu when the user right-clicks the icon
 --
 -- (View => View): When the icon's menu is requested, the main menu is shown.
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Controller.Conditions.PopupMenu where
 
 import Control.Monad

@@ -1,5 +1,10 @@
--- Returns a list of wifis by running nmcli
+-- | Returns a list of wifis by running nmcli
 -- (Network Manager's command line interface)
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Network.NetworkManager.Wifi where
 
 import Data.Maybe
@@ -13,11 +18,11 @@ getDetectedWifis = do
   s <- tryEC $ run ("nmcli", ["-f", "ssid,bssid", "dev", "wifi", "list"])
   let s'  = either (const "") id s
       s'' = tail $ lines s'
-  
+
   -- Get the essid and MAC for each wifi
   let pairs = map getESSIDAndBSSID s''
   return $ catMaybes pairs
-  
+
 -- Parse the essid and bssid
 getESSIDAndBSSID :: String -> Maybe (String, String)
 getESSIDAndBSSID s =

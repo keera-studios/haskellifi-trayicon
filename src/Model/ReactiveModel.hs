@@ -4,6 +4,11 @@
 -- reactive model is not necessarily concurrent (it doesn't have its own thread),
 -- although a facility is included to make it also concurrent (so that
 -- event handlers can be called as soon as they are present).
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Model.ReactiveModel
    ( ReactiveModel -- (basicModel, eventHandlers)
    -- * Construction

@@ -3,6 +3,11 @@
 --
 -- Model => View: Update the wifi list when necessary
 -- View => IO:    Copy the corresponding password when a menu item is activated
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Controller.Conditions.WifiListSync where
 
 import Control.Arrow

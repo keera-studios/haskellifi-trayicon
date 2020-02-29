@@ -1,4 +1,9 @@
 -- | Get the wifi list from iwconfig.
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Network.Wifi.Iwconfig
    ( getNetworkDetectedWifis )
   where
@@ -35,7 +40,7 @@ getNetworkDetectedWifisForIface s = do
   s <- tryEC $ run ("iwlist", [s, "scan"])
   let s'   = either (const "") id s
       s''  = filter isRelevantField $ lines s'
-  
+
   -- Parse the lists and select the addresses and essids
   let addresses = mapMaybe getAddress s''
       essids    = mapMaybe getESSID s''
@@ -58,7 +63,7 @@ getField field s@(_:xs)
 -- | Get the address field
 getAddress :: String -> Maybe String
 getAddress = getField fieldAddress
-    
+
 -- | Get the ESSID field
 getESSID :: String -> Maybe String
 getESSID = fmap ( tailSafe . initSafe ) . getField fieldESSID

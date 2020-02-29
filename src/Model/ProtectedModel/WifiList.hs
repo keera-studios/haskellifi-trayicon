@@ -1,5 +1,10 @@
 -- | This module holds the functions to access and modify the project name
 -- in a reactive model.
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module Model.ProtectedModel.WifiList
    ( getWifiList
    , addWifi

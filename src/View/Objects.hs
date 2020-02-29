@@ -1,5 +1,10 @@
 {-# LANGUAGE TemplateHaskell #-}
 -- | GUI loading and access to GUI elements from a glade builder
+--
+-- Copyright   : (C) Ivan Perez trading as Keera Studios, 2012
+-- License     : BSD3
+-- Maintainer  : support@keera.co.uk
+
 module View.Objects where
 
 -- External imports
