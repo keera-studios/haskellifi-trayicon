@@ -3,18 +3,18 @@
 -- Maintainer  : support@keera.co.uk
 --
 cabal-version: >= 1.10
-build-type:          Custom
+build-type:    Custom
 
-name:                haskellifi-trayicon
-version:             0.0.1
-author:              Ivan Perez
-maintainer:          ivan.perez@keera.co.uk
-homepage:            http://keera.co.uk/projects/haskellifi-trayicon
-license:             BSD3
-license-file:        LICENSE
-category:            Text
-synopsis:            Detect wifis and suggest predefined passwords
-stability:           Provisional
+name:          haskellifi-trayicon
+version:       0.0.1
+author:        Ivan Perez
+maintainer:    ivan.perez@keera.co.uk
+homepage:      http://keera.co.uk/projects/haskellifi-trayicon
+license:       BSD3
+license-file:  LICENSE
+category:      Text
+synopsis:      Detect wifis and suggest predefined passwords
+stability:     Provisional
 data-files:
     data/wifi.png
   , Interface.glade
@@ -23,12 +23,12 @@ data-files:
 -- You can disable the hlint test suite with -f-test-hlint
 flag test-hlint
   default: False
-  manual: True
+  manual:  True
 
 -- You can disable the haddock coverage test suite with -f-test-doc-coverage
 flag test-doc-coverage
   default: False
-  manual: True
+  manual:  True
 
 
 executable haskellifi-trayicon
@@ -37,7 +37,7 @@ executable haskellifi-trayicon
     Main.hs
 
   build-depends:
-      base >= 4.0
+      base      >= 4.0
     , glade
     , glib
     , gtk
@@ -102,7 +102,7 @@ test-suite haddock-coverage
       False
   else
     build-depends:
-        base >= 4 && < 5
+        base        >= 4 && < 5
       , directory
       , filepath
       , process
