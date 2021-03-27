@@ -1,3 +1,9 @@
+NOTICE
+======
+
+This package is now deprecated. It is kept here for documentation purposes, but
+no changes will be made.
+
 haskellifi-trayicon
 ===================
 
